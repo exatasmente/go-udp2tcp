@@ -17,7 +17,7 @@ E uma biblioteca
   sync : biblioteca para controle de concorrência (mutex), e condições de corrida
   
   
-> # Para compilar
+ # Para compilar
 >  A aplicação consiste em 2 programas diferentes e uma biblioteca 
 >  para realizar a compilação é necessário ter a linguagem go instalada
 > 
@@ -29,19 +29,21 @@ E uma biblioteca
 >  
 >  go build redes/udp2tcplib
 >  go install redes/udp2tcplib
-  
-  ### Comandos para compilar a aplicação cliente e servidor
-  go install redes/udp2tcp/client
-  go install redes/udp2tcp/server
+>  
+>  ### Comandos para compilar a aplicação cliente e servidor
+>  go install redes/udp2tcp/client
+>  go install redes/udp2tcp/server
+
+
 # Para executar
 
-## Cliente 
-
-./client.exe <ip do servidor> <porta do servidor> <caminho para o arquivo>
-  
- ## Servidor
- ./server.exe <porta do servidor> <diretório para salvar>
-
+>## Cliente 
+>
+>./client.exe <ip do servidor> <porta do servidor> <caminho para o arquivo>
+>  
+> ## Servidor
+> ./server.exe <porta do servidor> <diretório para salvar>
+>
 ##  Estruturas:
 
 # Esquema das Estruturas:
