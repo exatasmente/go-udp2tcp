@@ -33,8 +33,10 @@ E uma biblioteca
   go install redes/udp2tcp/client
   go install redes/udp2tcp/server
 # Para executar
- ## Cliente 
- ./client.exe <ip do servidor> <porta do servidor> <caminho para o arquivo>
+
+## Cliente 
+
+./client.exe <ip do servidor> <porta do servidor> <caminho para o arquivo>
   
  ## Servidor
  ./server.exe <porta do servidor> <diretório para salvar>
