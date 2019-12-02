@@ -17,17 +17,18 @@ E uma biblioteca
   sync : biblioteca para controle de concorrência (mutex), e condições de corrida
   
   
-# Para compilar
-  A aplicação consiste em 2 programas diferentes e uma biblioteca 
-  para realizar a compilação é necessário ter a linguagem go instalada
-  
-  ## comandos para montar o ambiente de desenvolvimento
-  export GOLANG=<Caminho absoluto para a pasta udp2ctp>
-  exemplo : export GOLANG=C:/Users/luiz/redes/udp2tcp
-  
-  ## Comandos em go para compilar e montar o pacote udp2tcplib
-  go build redes/udp2tcplib
-  go install redes/udp2tcplib
+> # Para compilar
+>  A aplicação consiste em 2 programas diferentes e uma biblioteca 
+>  para realizar a compilação é necessário ter a linguagem go instalada
+> 
+>  ## comandos para montar o ambiente de desenvolvimento
+>  export GOLANG=<Caminho absoluto para a pasta udp2ctp>
+>  exemplo : export GOLANG=C:/Users/luiz/redes/udp2tcp
+>  
+>  ## Comandos em go para compilar e montar o pacote udp2tcplib
+>  
+>  go build redes/udp2tcplib
+>  go install redes/udp2tcplib
   
   ### Comandos para compilar a aplicação cliente e servidor
   go install redes/udp2tcp/client
