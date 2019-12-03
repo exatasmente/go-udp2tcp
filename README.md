@@ -86,23 +86,17 @@ type UDP2Tcp struct {
 
 ```  
 
-# Esquema das Estruturas:
+# Procedimentos 
 
-
-
-# Funções e Procedimentos Utilizadas de bibliotecas importadas
-
-## Procedimentos de Inicialização:
-
-## Funções de Instânciação:
-
-## Funcões de Carremagento de Disco:
-
-## Procedimeontos de Remoção (Destrução)
-
-## Porcedimentos/Funções e Recuperação de Definição (Get  e Set):
-
-## Procedimentos/Funções Orientados à Eventos:
-
-# Funções e Procedimentos das Bibliotecas Pessoais:
-
+## utils.go
+```go 
+func (packet UDP2TcpPacket) isValid() bool
+func (packet UDP2TcpPacket) hasPayload() bool
+func (conn UDP2TcpConn) Write(file []byte)
+func (conn UDP2TcpConn) Read() []byte 
+func dump(buf []byte, rlen int, addr *net.UDPAddr) UDP2TcpPacket
+func buildPacket(seqNum, ackNum uint32, connID uint16, ACK, SYN, FIN bool, data []byte) UDP2TcpPacket
+func serializePacket(tcpPacket UDP2TcpPacket) []byte
+func bool2Binary(packet UDP2TcpPacket) byte
+func binaryToBool(flags byte) (bool, bool, bool)
+```
