@@ -89,31 +89,67 @@ type UDP2Tcp struct {
 # Procedimentos 
 
 ## utils.go
-```go 
-func (packet UDP2TcpPacket) isValid() bool
-```
-```go 
-func (packet UDP2TcpPacket) hasPayload() bool
-```
-```go 
-func (conn UDP2TcpConn) Write(file []byte)
-```
-```go 
-func (conn UDP2TcpConn) Read() []byte 
-```
-```go 
-func dump(buf []byte, rlen int, addr *net.UDPAddr) UDP2TcpPacket
-```
-```go 
-func buildPacket(seqNum, ackNum uint32, connID uint16, ACK, SYN, FIN bool, data []byte) UDP2TcpPacket
-```
-```go 
-func serializePacket(tcpPacket UDP2TcpPacket) []byte
-```
-```go 
-func bool2Binary(packet UDP2TcpPacket) byte
-```
-```go 
-func binaryToBool(flags byte) (bool, bool, bool)
-```
+
+> ```go 
+> func (packet UDP2TcpPacket) isValid() bool
+> ```
+> Entrada : estrutura UDP2TcpPacket
+> Saida : true para as flags definidas, false caso contrário
+> Verifica se as flags do pacote estão definidas
+
+> ```go 
+> func (packet UDP2TcpPacket) hasPayload() bool
+> ```
+>
+> Entrada : estrutura UDP2TcpPacket
+> Saida :  true caso o pacote tenha carga, false caso contrário
+> Verifica se o pacote tem carga, ou seja, se o tamanho do vetor de dados é maior que 0
+
+> ```go 
+> func (conn UDP2TcpConn) Write(file []byte)
+> ```
+> Entrada : vetor de bytes 
+> Procedimento de alto nivél para enviar o arquvio ao servidor 
+
+
+> ```go 
+> func (conn UDP2TcpConn) Read() []byte 
+> ```
+> Saída : vetor de bytes, arquivo enviado pelo cliente
+> Procedimento de alto nivél para recebimento de arquivos do cliente
+
+
+> ```go 
+> func dump(buf []byte, rlen int, addr *net.UDPAddr) UDP2TcpPacket
+> ```
+> Entrada : vetor de bytes, tamanho do vetor, endereço ip 
+> Saída : esturutura UDP2TcpPacket
+> Função responsável por converter os dados enviados pela rede para a representação do dado na aplicação
+
+> ```go 
+> func buildPacket(seqNum, ackNum uint32, connID uint16, ACK, SYN, FIN bool, data []byte) UDP2TcpPacket
+> ```
+>
+>
+>
+> ```go 
+> func serializePacket(tcpPacket UDP2TcpPacket) []byte
+> ```
+>
+>
+
+
+> ```go 
+> func bool2Binary(packet UDP2TcpPacket) byte
+> ```
+>
+>
+>
+
+> ```go 
+> func binaryToBool(flags byte) (bool, bool, bool)
+> ```
+>
+>
+>
 
