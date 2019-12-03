@@ -91,12 +91,29 @@ type UDP2Tcp struct {
 ## utils.go
 ```go 
 func (packet UDP2TcpPacket) isValid() bool
+```
+```go 
 func (packet UDP2TcpPacket) hasPayload() bool
+```
+```go 
 func (conn UDP2TcpConn) Write(file []byte)
+```
+```go 
 func (conn UDP2TcpConn) Read() []byte 
+```
+```go 
 func dump(buf []byte, rlen int, addr *net.UDPAddr) UDP2TcpPacket
+```
+```go 
 func buildPacket(seqNum, ackNum uint32, connID uint16, ACK, SYN, FIN bool, data []byte) UDP2TcpPacket
+```
+```go 
 func serializePacket(tcpPacket UDP2TcpPacket) []byte
+```
+```go 
 func bool2Binary(packet UDP2TcpPacket) byte
+```
+```go 
 func binaryToBool(flags byte) (bool, bool, bool)
 ```
+
